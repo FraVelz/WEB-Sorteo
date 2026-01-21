@@ -1,0 +1,196 @@
+---
+// Componente Header con navegación semántica
+---
+
+<header class="bg-white shadow-md sticky top-0 z-40">
+  <div class="container mx-auto px-4">
+    <nav class="flex items-center justify-between h-16 md:h-20" aria-label="Navegación principal">
+      <!-- Logo y Nombre del Sitio -->
+      <div class="flex items-center gap-3">
+        <a href="/" class="flex items-center gap-3 group" aria-label="Ir al inicio">
+          <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-primary-600 to-primary-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+            <span class="text-2xl">🎲</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-lg md:text-xl font-bold text-gray-900">Sorteo VIP</span>
+            <span class="text-xs text-gray-500 hidden md:block">Sorteos Profesionales</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Navegación Desktop -->
+      <ul class="hidden md:flex items-center gap-8" role="menubar">
+        <li role="none">
+          <a 
+            href="#inicio" 
+            class="text-gray-700 hover:text-primary-600 font-medium transition-colors py-2 border-b-2 border-transparent hover:border-primary-600"
+            role="menuitem"
+          >
+            Inicio
+          </a>
+        </li>
+        <li role="none">
+          <a 
+            href="#comprar" 
+            class="text-gray-700 hover:text-primary-600 font-medium transition-colors py-2 border-b-2 border-transparent hover:border-primary-600"
+            role="menuitem"
+          >
+            Comprar Boletas
+          </a>
+        </li>
+        <li role="none">
+          <a 
+            href="#estadisticas" 
+            class="text-gray-700 hover:text-primary-600 font-medium transition-colors py-2 border-b-2 border-transparent hover:border-primary-600"
+            role="menuitem"
+          >
+            Estadísticas
+          </a>
+        </li>
+        <li role="none">
+          <a 
+            href="#contacto" 
+            class="text-gray-700 hover:text-primary-600 font-medium transition-colors py-2 border-b-2 border-transparent hover:border-primary-600"
+            role="menuitem"
+          >
+            Contacto
+          </a>
+        </li>
+      </ul>
+
+      <!-- Botón CTA y Menú Móvil -->
+      <div class="flex items-center gap-4">
+        <a 
+          href="#comprar" 
+          class="hidden md:block bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-200"
+          aria-label="Comprar boletas ahora"
+        >
+          Comprar Ahora
+        </a>
+        
+        <!-- Botón Menú Móvil -->
+        <button 
+          id="btnMenuMobile"
+          class="md:hidden p-2 text-gray-700 hover:text-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg transition-colors"
+          aria-label="Abrir menú de navegación"
+          aria-expanded="false"
+          aria-controls="menuMobile"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Menú Móvil -->
+    <div 
+      id="menuMobile" 
+      class="hidden md:hidden border-t border-gray-200 py-4"
+      role="menu"
+      aria-labelledby="btnMenuMobile"
+    >
+      <ul class="flex flex-col gap-2" role="menubar">
+        <li role="none">
+          <a 
+            href="#inicio" 
+            class="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors"
+            role="menuitem"
+          >
+            Inicio
+          </a>
+        </li>
+        <li role="none">
+          <a 
+            href="#comprar" 
+            class="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors"
+            role="menuitem"
+          >
+            Comprar Boletas
+          </a>
+        </li>
+        <li role="none">
+          <a 
+            href="#estadisticas" 
+            class="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors"
+            role="menuitem"
+          >
+            Estadísticas
+          </a>
+        </li>
+        <li role="none">
+          <a 
+            href="#contacto" 
+            class="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors"
+            role="menuitem"
+          >
+            Contacto
+          </a>
+        </li>
+        <li role="none" class="px-4 pt-2">
+          <a 
+            href="#comprar" 
+            class="block w-full text-center bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition-all"
+            role="menuitem"
+          >
+            Comprar Ahora
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Toggle menú móvil
+  const btnMenuMobile = document.getElementById('btnMenuMobile');
+  const menuMobile = document.getElementById('menuMobile');
+
+  if (btnMenuMobile && menuMobile) {
+    btnMenuMobile.addEventListener('click', () => {
+      const isExpanded = btnMenuMobile.getAttribute('aria-expanded') === 'true';
+      menuMobile.classList.toggle('hidden');
+      btnMenuMobile.setAttribute('aria-expanded', (!isExpanded).toString());
+      
+      // Cambiar icono
+      const svg = btnMenuMobile.querySelector('svg');
+      if (svg) {
+        if (isExpanded) {
+          svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+        } else {
+          svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+        }
+      }
+    });
+
+    // Cerrar menú al hacer clic en un enlace
+    const menuLinks = menuMobile.querySelectorAll('a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuMobile.classList.add('hidden');
+        btnMenuMobile.setAttribute('aria-expanded', 'false');
+        const svg = btnMenuMobile.querySelector('svg');
+        if (svg) {
+          svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+        }
+      });
+    });
+  }
+
+  // Smooth scroll para enlaces de anclaje
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href && href !== '#') {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
+    });
+  });
+</script>

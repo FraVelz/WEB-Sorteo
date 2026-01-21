@@ -1,0 +1,169 @@
+---
+// Componente Footer con información estructurada y semántica HTML
+---
+
+<footer class="bg-gray-900 text-gray-300 mt-20">
+  <div class="container mx-auto px-4 py-12">
+    <!-- Contenido Principal del Footer -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+      <!-- Información de la Empresa -->
+      <section aria-labelledby="footer-about">
+        <h2 id="footer-about" class="text-white font-bold text-lg mb-4">Sobre Nosotros</h2>
+        <p class="mb-4 text-sm leading-relaxed">
+          Plataforma profesional de sorteos online con transparencia y seguridad garantizada. 
+          Realizamos sorteos justos y verificables.
+        </p>
+        <div class="flex gap-3">
+          <a 
+            href="#" 
+            class="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors"
+            aria-label="Síguenos en Facebook"
+          >
+            <span class="text-xl">📘</span>
+          </a>
+          <a 
+            href="#" 
+            class="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors"
+            aria-label="Síguenos en Twitter"
+          >
+            <span class="text-xl">🐦</span>
+          </a>
+          <a 
+            href="#" 
+            class="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors"
+            aria-label="Síguenos en Instagram"
+          >
+            <span class="text-xl">📷</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Enlaces Rápidos -->
+      <section aria-labelledby="footer-links">
+        <h2 id="footer-links" class="text-white font-bold text-lg mb-4">Enlaces Rápidos</h2>
+        <nav aria-label="Enlaces de navegación del footer">
+          <ul class="space-y-2">
+            <li>
+              <a href="#inicio" class="hover:text-primary-400 transition-colors text-sm">
+                Inicio
+              </a>
+            </li>
+            <li>
+              <a href="#comprar" class="hover:text-primary-400 transition-colors text-sm">
+                Comprar Boletas
+              </a>
+            </li>
+            <li>
+              <a href="#estadisticas" class="hover:text-primary-400 transition-colors text-sm">
+                Estadísticas
+              </a>
+            </li>
+            <li>
+              <a href="#contacto" class="hover:text-primary-400 transition-colors text-sm">
+                Contacto
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- Información Legal -->
+      <section aria-labelledby="footer-legal">
+        <h2 id="footer-legal" class="text-white font-bold text-lg mb-4">Legal</h2>
+        <nav aria-label="Enlaces legales del footer">
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="hover:text-primary-400 transition-colors text-sm">
+                Términos y Condiciones
+              </a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-primary-400 transition-colors text-sm">
+                Política de Privacidad
+              </a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-primary-400 transition-colors text-sm">
+                Política de Reembolso
+              </a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-primary-400 transition-colors text-sm">
+                Reglamento del Sorteo
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- Contacto -->
+      <section aria-labelledby="footer-contact">
+        <h2 id="footer-contact" class="text-white font-bold text-lg mb-4">Contacto</h2>
+        <address class="not-italic text-sm space-y-2">
+          <p class="flex items-start gap-2">
+            <span aria-hidden="true">📧</span>
+            <a href="mailto:info@sorteovip.com" class="hover:text-primary-400 transition-colors">
+              info@sorteovip.com
+            </a>
+          </p>
+          <p class="flex items-start gap-2">
+            <span aria-hidden="true">📞</span>
+            <a href="tel:+1234567890" class="hover:text-primary-400 transition-colors">
+              +1 (234) 567-890
+            </a>
+          </p>
+          <p class="flex items-start gap-2">
+            <span aria-hidden="true">📍</span>
+            <span>
+              123 Calle Principal<br />
+              Ciudad, País 12345
+            </span>
+          </p>
+        </address>
+      </section>
+    </div>
+
+    <!-- Separador -->
+    <div class="border-t border-gray-800 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <!-- Copyright -->
+        <div class="text-sm text-center md:text-left">
+          <p>
+            &copy; <time id="current-year">{new Date().getFullYear()}</time> Sorteo VIP. 
+            Todos los derechos reservados.
+          </p>
+        </div>
+
+        <!-- Información Adicional -->
+        <div class="text-sm text-center md:text-right">
+          <p>
+            Hecho con <span aria-label="amor">❤️</span> usando 
+            <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 transition-colors">
+              Astro
+            </a> y 
+            <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 transition-colors">
+              Tailwind CSS
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Aviso Legal -->
+      <div class="mt-6 pt-6 border-t border-gray-800">
+        <p class="text-xs text-gray-500 text-center leading-relaxed">
+          <strong>Aviso Legal:</strong> Este sorteo se realiza bajo estricto cumplimiento de las leyes locales. 
+          Los participantes deben ser mayores de edad. Los resultados son verificables y transparentes. 
+          Para más información, consulta nuestros términos y condiciones.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Actualizar año automáticamente
+  const yearElement = document.getElementById('current-year');
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear().toString();
+  }
+</script>
