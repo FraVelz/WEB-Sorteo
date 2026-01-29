@@ -1,4 +1,5 @@
 ---
+import Icon from "./icons/Icon.astro";
 // Componente Footer con información estructurada y semántica HTML
 ---
 
@@ -16,24 +17,24 @@
         <div class="flex gap-3">
           <a 
             href="#" 
-            class="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors"
+            class="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors text-gray-300 hover:text-white"
             aria-label="Síguenos en Facebook"
           >
-            <span class="text-xl">📘</span>
+            <Icon name="facebook" class="w-5 h-5" />
           </a>
           <a 
             href="#" 
-            class="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors"
+            class="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors text-gray-300 hover:text-white"
             aria-label="Síguenos en Twitter"
           >
-            <span class="text-xl">🐦</span>
+            <Icon name="twitter" class="w-5 h-5" />
           </a>
           <a 
             href="#" 
-            class="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors"
+            class="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors text-gray-300 hover:text-white"
             aria-label="Síguenos en Instagram"
           >
-            <span class="text-xl">📷</span>
+            <Icon name="instagram" class="w-5 h-5" />
           </a>
         </div>
       </section>
@@ -101,19 +102,19 @@
         <h2 id="footer-contact" class="text-white font-bold text-lg mb-4">Contacto</h2>
         <address class="not-italic text-sm space-y-2">
           <p class="flex items-start gap-2">
-            <span aria-hidden="true">📧</span>
+            <Icon name="envelope" class="w-4 h-4 flex-shrink-0 mt-0.5" ariaHidden={true} />
             <a href="mailto:info@sorteovip.com" class="hover:text-primary-400 transition-colors">
               info@sorteovip.com
             </a>
           </p>
           <p class="flex items-start gap-2">
-            <span aria-hidden="true">📞</span>
+            <Icon name="phone" class="w-4 h-4 flex-shrink-0 mt-0.5" ariaHidden={true} />
             <a href="tel:+1234567890" class="hover:text-primary-400 transition-colors">
               +1 (234) 567-890
             </a>
           </p>
           <p class="flex items-start gap-2">
-            <span aria-hidden="true">📍</span>
+            <Icon name="mapPin" class="w-4 h-4 flex-shrink-0 mt-0.5" ariaHidden={true} />
             <span>
               123 Calle Principal<br />
               Ciudad, País 12345
@@ -137,7 +138,7 @@
         <!-- Información Adicional -->
         <div class="text-sm text-center md:text-right">
           <p>
-            Hecho con <span aria-label="amor">❤️</span> usando 
+            Hecho con <span aria-label="amor" class="inline-flex align-middle"><Icon name="heart" class="w-4 h-4 text-red-500" ariaHidden={true} /></span> usando 
             <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 transition-colors">
               Astro
             </a> y 

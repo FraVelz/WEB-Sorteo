@@ -1,23 +1,24 @@
 # Sistema de Sorteo con Venta de Boletas
 
-Plataforma profesional de sorteos online con venta de boletas integrada, construida con Astro y Tailwind CSS.
+Plataforma template de sorteo online, para futura realización completa, en desarrollo.
 
 ## Características
 
 - **Anuncio del Proyecto**: Sección de landing para presentar el sorteo
 - **Compra de Boletas**: Sistema completo de compra con formulario
-- **Múltiples Métodos de Pago**: Tarjeta, Transferencia, PayPal (UI lista)
-- **Sorteo Automático**: El sorteo se realiza automáticamente cuando se completa una compra
-- **Estadísticas en Tiempo Real**: Boletas vendidas, total recaudado, participantes
-- **Preparado para Firebase**: Estructura y comentarios listos para integración
-- **Diseño Responsive**: Adaptado para todos los dispositivos
+- **Múltiples Métodos de Pago**: Tarjeta, Transferencia (sprite), PayPal (UI lista)
+- **Sorteo Automático**: El sorteo se realiza automáticamente con un temporizador.
+- **Estadísticas en Tiempo Real**: Boletas vendidas, total recaudado, participantes.
+- **Preparado para Firebase**: Estructura y comentarios listos para integración. (alternativa supabase).
+- **Diseño Responsive**: Adaptado para todos los dispositivos.
 
 ## Tecnologías
 
 - [Astro](https://astro.build/) - Framework web moderno
 - [Tailwind CSS](https://tailwindcss.com/) - Framework de CSS utility-first
 - [pnpm](https://pnpm.io/) - Gestor de paquetes rápido
-- [Firebase](https://firebase.google.com/) - Backend (a implementar)
+- [Firebase](https://firebase.google.com/) - Backend (a implementar o su alternativa).
+- Sprite.
 
 ## Instalación
 
@@ -55,11 +56,12 @@ pnpm preview
 
 ## Integración con Firebase
 
-El proyecto está preparado para integrarse con Firebase. En el archivo `src/pages/index.astro` encontrarás:
+El proyecto está preparado para integrarse con el backend. En el archivo `src/pages/index.astro` encontrarás:
 
 ### Estructura de Colecciones Sugeridas
 
 1. **`compras`**: Guarda cada compra realizada
+
    ```javascript
    {
      nombre: string,
@@ -75,6 +77,7 @@ El proyecto está preparado para integrarse con Firebase. En el archivo `src/pag
    ```
 
 2. **`boletas`**: Guarda cada boleta individual
+
    ```javascript
    {
      numero: string,
@@ -87,6 +90,7 @@ El proyecto está preparado para integrarse con Firebase. En el archivo `src/pag
    ```
 
 3. **`sorteos`**: Guarda resultados de sorteos
+
    ```javascript
    {
      ganador: string,
@@ -98,6 +102,7 @@ El proyecto está preparado para integrarse con Firebase. En el archivo `src/pag
    ```
 
 4. **`estadisticas`**: Estadísticas generales
+
    ```javascript
    {
      boletasVendidas: number,
@@ -109,7 +114,7 @@ El proyecto está preparado para integrarse con Firebase. En el archivo `src/pag
 
 ### Funciones a Implementar
 
-En el código encontrarás comentarios `TODO` indicando dónde implementar:
+En el código encontrarás comentarios `TODO` indicando dónde implementar, en caso de firebase:
 
 - `guardarCompraEnFirebase()` - Guardar compra en Firestore
 - `generarBoletasEnFirebase()` - Crear boletas para una compra
@@ -118,7 +123,8 @@ En el código encontrarás comentarios `TODO` indicando dónde implementar:
 
 ### Pasos para Integrar
 
-1. Instala Firebase:
+1. Instala Firebase (caso para firebase):
+
    ```bash
    pnpm add firebase
    ```
@@ -139,13 +145,6 @@ Puedes personalizar la información del sorteo en la sección Hero de `src/pages
 - Precio por boleta
 - Cantidad de boletas disponibles
 
-
 Licencia: MIT
 
-Autor: Fravelz
-
-### Estilos
-
-Los estilos están personalizables a través de Tailwind CSS. Puedes modificar los colores en `tailwind.config.mjs`.
-
-valor 3 euros
+> **Desarrollador Web:** Fravelz

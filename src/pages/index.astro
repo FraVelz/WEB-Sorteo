@@ -1,14 +1,19 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Icon from "../components/icons/Icon.astro";
 ---
 
 <Layout title="Sorteo VIP - Ganador Anual">
   <!-- Hero Section - Anuncio del Proyecto -->
-  <section id="inicio" class="bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white py-20" aria-labelledby="hero-title">
+  <section
+    id="inicio"
+    class="bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white py-20"
+    aria-labelledby="hero-title"
+  >
     <div class="container mx-auto px-4 max-w-6xl">
       <div class="text-center mb-12">
-        <div class="mb-6">
-          <span class="text-7xl">🎁</span>
+        <div class="mb-6 flex justify-center">
+          <Icon name="gift" class="w-20 h-20 md:w-24 md:h-24 text-white" />
         </div>
         <h1 id="hero-title" class="text-5xl md:text-6xl font-bold mb-4">
           Sorteo VIP Anual 2024
@@ -16,43 +21,65 @@ import Layout from '../layouts/Layout.astro';
         <p class="text-xl md:text-2xl text-primary-100 mb-8">
           Oportunidad única de ganar premios increíbles
         </p>
-        <div class="inline-block bg-white/20 backdrop-blur-sm rounded-full px-6 py-3">
-          <p class="text-lg font-semibold">
-            🏆 Premio Principal: $50,000 USD
-          </p>
+        <div
+          class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3"
+        >
+          <Icon name="trophy" class="w-6 h-6 text-white flex-shrink-0" />
+          <p class="text-lg font-semibold">Premio Principal: $50,000 USD</p>
         </div>
       </div>
 
       <!-- Información del Proyecto -->
       <div class="grid md:grid-cols-3 gap-6 mt-12">
-        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-          <div class="text-3xl mb-3">📅</div>
+        <div
+          class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+        >
+          <div class="mb-3 text-white">
+            <Icon name="calendar" class="w-10 h-10" />
+          </div>
           <h3 class="font-bold text-lg mb-2">Fecha del Sorteo</h3>
           <p class="text-primary-100">31 de Diciembre, 2024</p>
         </div>
-        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-          <div class="text-3xl mb-3">🎫</div>
+        <div
+          class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+        >
+          <div class="mb-3 text-white">
+            <Icon name="ticket" class="w-10 h-10" />
+          </div>
           <h3 class="font-bold text-lg mb-2">Boletas Disponibles</h3>
           <p class="text-primary-100" id="boletasDisponibles">500 boletas</p>
         </div>
-        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-          <div class="text-3xl mb-3">💰</div>
+        <div
+          class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+        >
+          <div class="mb-3 text-white">
+            <Icon name="currency" class="w-10 h-10" />
+          </div>
           <h3 class="font-bold text-lg mb-2">Precio por Boleta</h3>
           <p class="text-primary-100">$100 USD</p>
         </div>
       </div>
 
       <!-- Detalles del Proyecto -->
-      <div class="mt-12 bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-        <h2 class="text-2xl font-bold mb-4">📋 Detalles del Sorteo</h2>
+      <div
+        class="mt-12 bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
+      >
+        <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+          <Icon name="clipboard" class="w-7 h-7 text-white" />
+          Detalles del Sorteo
+        </h2>
         <div class="space-y-3 text-primary-100">
-          <p>• El sorteo se realizará automáticamente cuando una boleta sea comprada y pagada</p>
+          <p>
+            • El sorteo se realizará automáticamente cuando una boleta sea
+            comprada y pagada
+          </p>
           <p>• Múltiples boletas = más oportunidades de ganar</p>
           <p>• Resultados verificables y transparentes</p>
           <p>• El ganador será notificado inmediatamente</p>
         </div>
         <p class="mt-4 text-sm text-primary-200 italic">
-          * Información del proyecto. Reemplaza este contenido con los detalles reales de tu sorteo.
+          * Información del proyecto. Reemplaza este contenido con los detalles
+          reales de tu sorteo.
         </p>
       </div>
     </div>
@@ -62,20 +89,26 @@ import Layout from '../layouts/Layout.astro';
   <section id="comprar" class="py-16 bg-white" aria-labelledby="comprar-title">
     <div class="container mx-auto px-4 max-w-4xl">
       <div class="text-center mb-12">
-        <h2 id="comprar-title" class="text-4xl font-bold text-gray-900 mb-4">
-          🛒 Compra tu Boleta
+        <h2 id="comprar-title" class="text-4xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-3">
+          <Icon name="cart" class="w-10 h-10 text-primary-600" />
+          Compra tu Boleta
         </h2>
         <p class="text-xl text-gray-600">
           Participa en el sorteo comprando una o más boletas
         </p>
       </div>
 
-      <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl shadow-xl p-8">
+      <div
+        class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl shadow-xl p-8"
+      >
         <form id="formCompra" class="space-y-6">
           <!-- Datos del Comprador -->
           <div class="grid md:grid-cols-2 gap-6">
             <div>
-              <label for="nombre" class="block text-sm font-semibold text-gray-700 mb-2">
+              <label
+                for="nombre"
+                class="block text-sm font-semibold text-gray-700 mb-2"
+              >
                 Nombre Completo *
               </label>
               <input
@@ -88,7 +121,10 @@ import Layout from '../layouts/Layout.astro';
               />
             </div>
             <div>
-              <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
+              <label
+                for="email"
+                class="block text-sm font-semibold text-gray-700 mb-2"
+              >
                 Correo Electrónico *
               </label>
               <input
@@ -104,7 +140,10 @@ import Layout from '../layouts/Layout.astro';
 
           <div class="grid md:grid-cols-2 gap-6">
             <div>
-              <label for="telefono" class="block text-sm font-semibold text-gray-700 mb-2">
+              <label
+                for="telefono"
+                class="block text-sm font-semibold text-gray-700 mb-2"
+              >
                 Teléfono *
               </label>
               <input
@@ -117,7 +156,10 @@ import Layout from '../layouts/Layout.astro';
               />
             </div>
             <div>
-              <label for="cantidad" class="block text-sm font-semibold text-gray-700 mb-2">
+              <label
+                for="cantidad"
+                class="block text-sm font-semibold text-gray-700 mb-2"
+              >
                 Cantidad de Boletas *
               </label>
               <input
@@ -135,7 +177,10 @@ import Layout from '../layouts/Layout.astro';
 
           <!-- Resumen de Compra -->
           <div class="bg-white rounded-xl p-6 border-2 border-gray-200">
-            <h3 class="font-bold text-lg text-gray-900 mb-4">📊 Resumen de Compra</h3>
+            <h3 class="font-bold text-lg text-gray-900 mb-4 flex items-center gap-2">
+              <Icon name="chart" class="w-5 h-5 text-primary-600" />
+              Resumen de Compra
+            </h3>
             <div class="space-y-3">
               <div class="flex justify-between text-gray-700">
                 <span>Precio por boleta:</span>
@@ -146,7 +191,9 @@ import Layout from '../layouts/Layout.astro';
                 <span class="font-semibold" id="resumenSubtotal">$100 USD</span>
               </div>
               <div class="border-t-2 border-gray-300 pt-3 mt-3">
-                <div class="flex justify-between text-xl font-bold text-primary-600">
+                <div
+                  class="flex justify-between text-xl font-bold text-primary-600"
+                >
                   <span>Total:</span>
                   <span id="resumenTotal">$100 USD</span>
                 </div>
@@ -161,23 +208,51 @@ import Layout from '../layouts/Layout.astro';
             </label>
             <div class="grid md:grid-cols-3 gap-4">
               <label class="cursor-pointer">
-                <input type="radio" name="metodoPago" value="tarjeta" class="peer hidden" required />
-                <div class="p-4 border-2 border-gray-300 rounded-lg hover:border-primary-500 peer-checked:border-primary-500 peer-checked:bg-primary-50 transition-all">
-                  <div class="text-2xl mb-2">💳</div>
+                <input
+                  type="radio"
+                  name="metodoPago"
+                  value="tarjeta"
+                  class="peer hidden"
+                  required
+                />
+                <div
+                  class="p-4 border-2 border-gray-300 rounded-lg hover:border-primary-500 peer-checked:border-primary-500 peer-checked:bg-primary-50 transition-all"
+                >
+                  <div class="mb-2 text-primary-600">
+                    <Icon name="creditCard" class="w-8 h-8" />
+                  </div>
                   <div class="font-semibold text-gray-900">Tarjeta</div>
                 </div>
               </label>
               <label class="cursor-pointer">
-                <input type="radio" name="metodoPago" value="transferencia" class="peer hidden" />
-                <div class="p-4 border-2 border-gray-300 rounded-lg hover:border-primary-500 peer-checked:border-primary-500 peer-checked:bg-primary-50 transition-all">
-                  <div class="text-2xl mb-2">🏦</div>
+                <input
+                  type="radio"
+                  name="metodoPago"
+                  value="transferencia"
+                  class="peer hidden"
+                />
+                <div
+                  class="p-4 border-2 border-gray-300 rounded-lg hover:border-primary-500 peer-checked:border-primary-500 peer-checked:bg-primary-50 transition-all"
+                >
+                  <div class="mb-2 text-primary-600">
+                    <Icon name="bank" class="w-8 h-8" />
+                  </div>
                   <div class="font-semibold text-gray-900">Transferencia</div>
                 </div>
               </label>
               <label class="cursor-pointer">
-                <input type="radio" name="metodoPago" value="paypal" class="peer hidden" />
-                <div class="p-4 border-2 border-gray-300 rounded-lg hover:border-primary-500 peer-checked:border-primary-500 peer-checked:bg-primary-50 transition-all">
-                  <div class="text-2xl mb-2">🅿️</div>
+                <input
+                  type="radio"
+                  name="metodoPago"
+                  value="paypal"
+                  class="peer hidden"
+                />
+                <div
+                  class="p-4 border-2 border-gray-300 rounded-lg hover:border-primary-500 peer-checked:border-primary-500 peer-checked:bg-primary-50 transition-all"
+                >
+                  <div class="mb-2 text-primary-600">
+                    <Icon name="paypal" class="w-8 h-8" />
+                  </div>
                   <div class="font-semibold text-gray-900">PayPal</div>
                 </div>
               </label>
@@ -188,7 +263,10 @@ import Layout from '../layouts/Layout.astro';
           <div id="infoTarjeta" class="hidden">
             <div class="grid md:grid-cols-2 gap-6">
               <div>
-                <label for="numeroTarjeta" class="block text-sm font-semibold text-gray-700 mb-2">
+                <label
+                  for="numeroTarjeta"
+                  class="block text-sm font-semibold text-gray-700 mb-2"
+                >
                   Número de Tarjeta *
                 </label>
                 <input
@@ -201,7 +279,10 @@ import Layout from '../layouts/Layout.astro';
                 />
               </div>
               <div>
-                <label for="fechaVencimiento" class="block text-sm font-semibold text-gray-700 mb-2">
+                <label
+                  for="fechaVencimiento"
+                  class="block text-sm font-semibold text-gray-700 mb-2"
+                >
                   Fecha de Vencimiento *
                 </label>
                 <input
@@ -216,7 +297,10 @@ import Layout from '../layouts/Layout.astro';
             </div>
             <div class="grid md:grid-cols-2 gap-6 mt-6">
               <div>
-                <label for="nombreTarjeta" class="block text-sm font-semibold text-gray-700 mb-2">
+                <label
+                  for="nombreTarjeta"
+                  class="block text-sm font-semibold text-gray-700 mb-2"
+                >
                   Nombre en la Tarjeta *
                 </label>
                 <input
@@ -228,7 +312,10 @@ import Layout from '../layouts/Layout.astro';
                 />
               </div>
               <div>
-                <label for="cvv" class="block text-sm font-semibold text-gray-700 mb-2">
+                <label
+                  for="cvv"
+                  class="block text-sm font-semibold text-gray-700 mb-2"
+                >
                   CVV *
                 </label>
                 <input
@@ -247,9 +334,10 @@ import Layout from '../layouts/Layout.astro';
           <button
             type="submit"
             id="btnComprar"
-            class="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-bold py-5 px-8 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none text-lg"
+            class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-bold py-5 px-8 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none text-lg"
           >
-            💳 Comprar y Pagar Boletas
+            <Icon name="creditCard" class="w-6 h-6" />
+            Comprar y Pagar Boletas
           </button>
 
           <p class="text-sm text-gray-500 text-center">
@@ -261,29 +349,57 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Estadísticas del Sorteo -->
-  <section id="estadisticas" class="py-16 bg-gray-50" aria-labelledby="estadisticas-title">
+  <section
+    id="estadisticas"
+    class="py-16 bg-gray-50"
+    aria-labelledby="estadisticas-title"
+  >
     <div class="container mx-auto px-4 max-w-6xl">
-      <h2 id="estadisticas-title" class="text-3xl font-bold text-center text-gray-900 mb-12">
-        📊 Estadísticas del Sorteo
+      <h2
+        id="estadisticas-title"
+        class="text-3xl font-bold text-center text-gray-900 mb-12 flex items-center justify-center gap-2"
+      >
+        <Icon name="chart" class="w-8 h-8 text-primary-600" />
+        Estadísticas del Sorteo
       </h2>
       <div class="grid md:grid-cols-4 gap-6">
-        <div class="bg-white rounded-xl p-6 shadow-lg text-center border-2 border-blue-200">
-          <div class="text-4xl mb-3">🎫</div>
+        <div
+          class="bg-white rounded-xl p-6 shadow-lg text-center border-2 border-blue-200"
+        >
+          <div class="mb-3 flex justify-center text-blue-600">
+            <Icon name="ticket" class="w-12 h-12" />
+          </div>
           <p class="text-sm text-gray-600 mb-1">Boletas Vendidas</p>
           <p id="boletasVendidas" class="text-3xl font-bold text-blue-600">0</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-lg text-center border-2 border-green-200">
-          <div class="text-4xl mb-3">💰</div>
+        <div
+          class="bg-white rounded-xl p-6 shadow-lg text-center border-2 border-green-200"
+        >
+          <div class="mb-3 flex justify-center text-green-600">
+            <Icon name="currency" class="w-12 h-12" />
+          </div>
           <p class="text-sm text-gray-600 mb-1">Total Recaudado</p>
-          <p id="totalRecaudado" class="text-3xl font-bold text-green-600">$0</p>
+          <p id="totalRecaudado" class="text-3xl font-bold text-green-600">
+            $0
+          </p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-lg text-center border-2 border-purple-200">
-          <div class="text-4xl mb-3">👥</div>
+        <div
+          class="bg-white rounded-xl p-6 shadow-lg text-center border-2 border-purple-200"
+        >
+          <div class="mb-3 flex justify-center text-purple-600">
+            <Icon name="users" class="w-12 h-12" />
+          </div>
           <p class="text-sm text-gray-600 mb-1">Participantes</p>
-          <p id="totalParticipantes" class="text-3xl font-bold text-purple-600">0</p>
+          <p id="totalParticipantes" class="text-3xl font-bold text-purple-600">
+            0
+          </p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-lg text-center border-2 border-red-200">
-          <div class="text-4xl mb-3">🎯</div>
+        <div
+          class="bg-white rounded-xl p-6 shadow-lg text-center border-2 border-red-200"
+        >
+          <div class="mb-3 flex justify-center text-red-600">
+            <Icon name="target" class="w-12 h-12" />
+          </div>
           <p class="text-sm text-gray-600 mb-1">Sorteos Realizados</p>
           <p id="totalSorteos" class="text-3xl font-bold text-red-600">0</p>
         </div>
@@ -292,11 +408,16 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Sección de Contacto -->
-  <section id="contacto" class="py-16 bg-white" aria-labelledby="contacto-title">
+  <section
+    id="contacto"
+    class="py-16 bg-white"
+    aria-labelledby="contacto-title"
+  >
     <div class="container mx-auto px-4 max-w-4xl">
       <div class="text-center mb-12">
-        <h2 id="contacto-title" class="text-4xl font-bold text-gray-900 mb-4">
-          📞 Contáctanos
+        <h2 id="contacto-title" class="text-4xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-3">
+          <Icon name="phone" class="w-10 h-10 text-primary-600" />
+          Contáctanos
         </h2>
         <p class="text-xl text-gray-600">
           ¿Tienes preguntas? Estamos aquí para ayudarte
@@ -306,33 +427,47 @@ import Layout from '../layouts/Layout.astro';
       <div class="grid md:grid-cols-2 gap-8">
         <!-- Información de Contacto -->
         <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8">
-          <h3 class="text-2xl font-bold text-gray-900 mb-6">Información de Contacto</h3>
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">
+            Información de Contacto
+          </h3>
           <div class="space-y-4">
             <div class="flex items-start gap-4">
-              <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <span class="text-2xl">📧</span>
+              <div
+                class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0 text-primary-600"
+              >
+                <Icon name="envelope" class="w-6 h-6" />
               </div>
               <div>
                 <h4 class="font-semibold text-gray-900 mb-1">Email</h4>
-                <a href="mailto:info@sorteovip.com" class="text-primary-600 hover:text-primary-700 transition-colors">
+                <a
+                  href="mailto:info@sorteovip.com"
+                  class="text-primary-600 hover:text-primary-700 transition-colors"
+                >
                   info@sorteovip.com
                 </a>
               </div>
             </div>
             <div class="flex items-start gap-4">
-              <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <span class="text-2xl">📞</span>
+              <div
+                class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0 text-primary-600"
+              >
+                <Icon name="phone" class="w-6 h-6" />
               </div>
               <div>
                 <h4 class="font-semibold text-gray-900 mb-1">Teléfono</h4>
-                <a href="tel:+1234567890" class="text-primary-600 hover:text-primary-700 transition-colors">
+                <a
+                  href="tel:+1234567890"
+                  class="text-primary-600 hover:text-primary-700 transition-colors"
+                >
                   +1 (234) 567-890
                 </a>
               </div>
             </div>
             <div class="flex items-start gap-4">
-              <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <span class="text-2xl">📍</span>
+              <div
+                class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0 text-primary-600"
+              >
+                <Icon name="mapPin" class="w-6 h-6" />
               </div>
               <div>
                 <h4 class="font-semibold text-gray-900 mb-1">Dirección</h4>
@@ -343,11 +478,15 @@ import Layout from '../layouts/Layout.astro';
               </div>
             </div>
             <div class="flex items-start gap-4">
-              <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <span class="text-2xl">🕒</span>
+              <div
+                class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0 text-primary-600"
+              >
+                <Icon name="clock" class="w-6 h-6" />
               </div>
               <div>
-                <h4 class="font-semibold text-gray-900 mb-1">Horario de Atención</h4>
+                <h4 class="font-semibold text-gray-900 mb-1">
+                  Horario de Atención
+                </h4>
                 <p class="text-gray-600">
                   Lunes - Viernes: 9:00 AM - 6:00 PM<br />
                   Sábados: 10:00 AM - 2:00 PM
@@ -358,11 +497,18 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <!-- Formulario de Contacto -->
-        <div class="bg-white rounded-2xl shadow-xl p-8 border-2 border-gray-200">
-          <h3 class="text-2xl font-bold text-gray-900 mb-6">Envíanos un Mensaje</h3>
+        <div
+          class="bg-white rounded-2xl shadow-xl p-8 border-2 border-gray-200"
+        >
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">
+            Envíanos un Mensaje
+          </h3>
           <form id="formContacto" class="space-y-4">
             <div>
-              <label for="contactoNombre" class="block text-sm font-semibold text-gray-700 mb-2">
+              <label
+                for="contactoNombre"
+                class="block text-sm font-semibold text-gray-700 mb-2"
+              >
                 Nombre *
               </label>
               <input
@@ -375,7 +521,10 @@ import Layout from '../layouts/Layout.astro';
               />
             </div>
             <div>
-              <label for="contactoEmail" class="block text-sm font-semibold text-gray-700 mb-2">
+              <label
+                for="contactoEmail"
+                class="block text-sm font-semibold text-gray-700 mb-2"
+              >
                 Email *
               </label>
               <input
@@ -388,7 +537,10 @@ import Layout from '../layouts/Layout.astro';
               />
             </div>
             <div>
-              <label for="contactoAsunto" class="block text-sm font-semibold text-gray-700 mb-2">
+              <label
+                for="contactoAsunto"
+                class="block text-sm font-semibold text-gray-700 mb-2"
+              >
                 Asunto *
               </label>
               <input
@@ -401,7 +553,10 @@ import Layout from '../layouts/Layout.astro';
               />
             </div>
             <div>
-              <label for="contactoMensaje" class="block text-sm font-semibold text-gray-700 mb-2">
+              <label
+                for="contactoMensaje"
+                class="block text-sm font-semibold text-gray-700 mb-2"
+              >
                 Mensaje *
               </label>
               <textarea
@@ -410,8 +565,7 @@ import Layout from '../layouts/Layout.astro';
                 required
                 rows="4"
                 class="w-full p-3 border-2 border-gray-300 rounded-lg focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all resize-none"
-                placeholder="Escribe tu mensaje aquí..."
-              ></textarea>
+                placeholder="Escribe tu mensaje aquí..."></textarea>
             </div>
             <button
               type="submit"
@@ -426,15 +580,21 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Resultado del Sorteo -->
-  <div id="resultadoSorteo" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-    <div class="bg-gradient-to-br from-yellow-50 to-orange-50 border-2 border-yellow-300 rounded-2xl shadow-2xl p-8 max-w-2xl w-full text-center animate-pulse">
-      <div class="mb-4">
-        <span class="text-7xl">🎉</span>
+  <div
+    id="resultadoSorteo"
+    class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+  >
+    <div
+      class="bg-gradient-to-br from-yellow-50 to-orange-50 border-2 border-yellow-300 rounded-2xl shadow-2xl p-8 max-w-2xl w-full text-center animate-pulse"
+    >
+      <div class="mb-4 flex justify-center">
+        <Icon name="sparkles" class="w-20 h-20 text-yellow-500" />
       </div>
       <h2 class="text-4xl font-bold text-gray-900 mb-2">¡Felicidades!</h2>
       <p class="text-xl text-gray-600 mb-6">El ganador del sorteo es:</p>
       <div class="bg-white rounded-xl p-8 shadow-lg mb-6">
-        <p id="ganadorNombre" class="text-5xl font-bold text-primary-600 mb-2"></p>
+        <p id="ganadorNombre" class="text-5xl font-bold text-primary-600 mb-2">
+        </p>
         <p id="ganadorBoleta" class="text-2xl text-gray-700"></p>
         <p id="ganadorFecha" class="text-lg text-gray-500 mt-4"></p>
       </div>
@@ -448,14 +608,20 @@ import Layout from '../layouts/Layout.astro';
   </div>
 
   <!-- Confirmación de Compra -->
-  <div id="confirmacionCompra" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-    <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full text-center">
-      <div class="mb-4">
-        <span class="text-6xl">✅</span>
+  <div
+    id="confirmacionCompra"
+    class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+  >
+    <div
+      class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full text-center"
+    >
+      <div class="mb-4 flex justify-center text-green-600">
+        <Icon name="check" class="w-16 h-16" />
       </div>
       <h2 class="text-3xl font-bold text-gray-900 mb-4">¡Compra Exitosa!</h2>
       <p class="text-lg text-gray-600 mb-6">
-        Tu boleta ha sido registrada correctamente. El sorteo se realizará automáticamente.
+        Tu boleta ha sido registrada correctamente. El sorteo se realizará
+        automáticamente.
       </p>
       <div class="bg-gray-50 rounded-xl p-4 mb-6 text-left">
         <p class="text-sm text-gray-600 mb-1">Número de boleta:</p>
@@ -471,359 +637,24 @@ import Layout from '../layouts/Layout.astro';
   </div>
 </Layout>
 
-<script>
-  // ============================================
-  // INDICACIONES PARA FIREBASE
-  // ============================================
-  // 
-  // 1. AQUÍ DEBES IMPORTAR FIREBASE:
-  //    import { initializeApp } from 'firebase/app';
-  //    import { getFirestore, collection, addDoc, query, getDocs } from 'firebase/firestore';
-  //    import { getAuth } from 'firebase/auth';
-  //
-  // 2. CONFIGURAR FIREBASE:
-  //    const firebaseConfig = { ... };
-  //    const app = initializeApp(firebaseConfig);
-  //    const db = getFirestore(app);
-  //
-  // 3. COLECCIONES DE FIREBASE NECESARIAS:
-  //    - 'compras': Guardar cada compra realizada
-  //      Documento: { nombre, email, telefono, cantidad, total, metodoPago, fecha, numeroBoleta, pagado: true/false }
-  //
-  //    - 'sorteos': Guardar resultados de sorteos
-  //      Documento: { ganador, numeroBoleta, fecha, compraId, premio }
-  //
-  //    - 'boletas': Guardar cada boleta individual
-  //      Documento: { numero, comprador, email, compraId, fecha, estado: 'vendida'/'disponible' }
-  //
-  //    - 'estadisticas': Estadísticas generales
-  //      Documento: { boletasVendidas, totalRecaudado, totalParticipantes, totalSorteos }
-  //
-  // 4. FUNCIONES A IMPLEMENTAR CON FIREBASE:
-  //    - guardarCompra(datosCompra) -> addDoc(collection(db, 'compras'), datosCompra)
-  //    - generarBoletas(cantidad, compraId) -> Crear documentos en 'boletas'
-  //    - realizarSorteo(boletaId) -> Guardar en 'sorteos'
-  //    - actualizarEstadisticas() -> Leer de 'estadisticas' y actualizar UI
-  //
-  // ============================================
+<!-- <script type="module">
+  import initSorteo from "../lib/indexLogic.ts";
 
-  // Estado de la aplicación
-  const estado = {
-    precioBoleta: 100,
-    boletasVendidas: 0,
-    totalRecaudado: 0,
-    totalParticipantes: 0,
-    totalSorteos: 0,
-    proximoNumeroBoleta: 1,
-  };
-
-  // Elementos del DOM
-  const formCompra = document.getElementById('formCompra') as HTMLFormElement;
-  const cantidadInput = document.getElementById('cantidad') as HTMLInputElement;
-  const metodoPagoInputs = document.querySelectorAll('input[name="metodoPago"]') as NodeListOf<HTMLInputElement>;
-  const infoTarjeta = document.getElementById('infoTarjeta') as HTMLDivElement;
-  const resumenCantidad = document.getElementById('resumenCantidad') as HTMLSpanElement;
-  const resumenSubtotal = document.getElementById('resumenSubtotal') as HTMLSpanElement;
-  const resumenTotal = document.getElementById('resumenTotal') as HTMLSpanElement;
-  
-  const boletasVendidas = document.getElementById('boletasVendidas') as HTMLParagraphElement;
-  const totalRecaudado = document.getElementById('totalRecaudado') as HTMLParagraphElement;
-  const totalParticipantes = document.getElementById('totalParticipantes') as HTMLParagraphElement;
-  const totalSorteos = document.getElementById('totalSorteos') as HTMLParagraphElement;
-  
-  const confirmacionCompra = document.getElementById('confirmacionCompra') as HTMLDivElement;
-  const numeroBoleta = document.getElementById('numeroBoleta') as HTMLParagraphElement;
-  const btnCerrarConfirmacion = document.getElementById('btnCerrarConfirmacion') as HTMLButtonElement;
-  
-  const resultadoSorteo = document.getElementById('resultadoSorteo') as HTMLDivElement;
-  const ganadorNombre = document.getElementById('ganadorNombre') as HTMLParagraphElement;
-  const ganadorBoleta = document.getElementById('ganadorBoleta') as HTMLParagraphElement;
-  const ganadorFecha = document.getElementById('ganadorFecha') as HTMLParagraphElement;
-  const btnCerrarResultado = document.getElementById('btnCerrarResultado') as HTMLButtonElement;
-
-  // Actualizar resumen cuando cambia la cantidad
-  cantidadInput.addEventListener('input', () => {
-    const cantidad = parseInt(cantidadInput.value) || 1;
-    const subtotal = cantidad * estado.precioBoleta;
-    
-    resumenCantidad.textContent = `Cantidad: ${cantidad} boleta${cantidad > 1 ? 's' : ''}`;
-    resumenSubtotal.textContent = `$${subtotal} USD`;
-    resumenTotal.textContent = `$${subtotal} USD`;
-  });
-
-  // Mostrar/ocultar información de tarjeta
-  metodoPagoInputs.forEach(input => {
-    input.addEventListener('change', () => {
-      if (input.value === 'tarjeta') {
-        infoTarjeta.classList.remove('hidden');
-      } else {
-        infoTarjeta.classList.add('hidden');
-      }
-    });
-  });
-
-  // Formatear número de tarjeta
-  const numeroTarjetaInput = document.getElementById('numeroTarjeta') as HTMLInputElement;
-  if (numeroTarjetaInput) {
-    numeroTarjetaInput.addEventListener('input', (e) => {
-      let value = (e.target as HTMLInputElement).value.replace(/\s/g, '');
-      value = value.match(/.{1,4}/g)?.join(' ') || value;
-      (e.target as HTMLInputElement).value = value;
-    });
-  }
-
-  // Formatear fecha de vencimiento
-  const fechaVencimientoInput = document.getElementById('fechaVencimiento') as HTMLInputElement;
-  if (fechaVencimientoInput) {
-    fechaVencimientoInput.addEventListener('input', (e) => {
-      let value = (e.target as HTMLInputElement).value.replace(/\D/g, '');
-      if (value.length >= 2) {
-        value = value.slice(0, 2) + '/' + value.slice(2, 4);
-      }
-      (e.target as HTMLInputElement).value = value;
-    });
-  }
-
-  // Función para generar número de boleta único
-  function generarNumeroBoleta(): string {
-    const numero = estado.proximoNumeroBoleta.toString().padStart(6, '0');
-    estado.proximoNumeroBoleta++;
-    return `BOL-${numero}`;
-  }
-
-  // Función para actualizar estadísticas
-  function actualizarEstadisticas() {
-    boletasVendidas.textContent = estado.boletasVendidas.toString();
-    totalRecaudado.textContent = `$${estado.totalRecaudado} USD`;
-    totalParticipantes.textContent = estado.totalParticipantes.toString();
-    totalSorteos.textContent = estado.totalSorteos.toString();
-  }
-
-  // ============================================
-  // AQUÍ IRÍA LA INTEGRACIÓN CON FIREBASE
-  // ============================================
-  async function guardarCompraEnFirebase(datosCompra: any) {
-    // TODO: Implementar guardado en Firebase
-    // Ejemplo:
-    // const docRef = await addDoc(collection(db, 'compras'), datosCompra);
-    // return docRef.id;
-    
-    // Por ahora, simulación:
-    console.log('Guardando compra en Firebase:', datosCompra);
-    return 'compra_' + Date.now();
-  }
-
-  async function generarBoletasEnFirebase(cantidad: number, compraId: string, comprador: string, email: string) {
-    // TODO: Implementar generación de boletas en Firebase
-    // Ejemplo:
-    // const boletas = [];
-    // for (let i = 0; i < cantidad; i++) {
-    //   const numeroBoleta = generarNumeroBoleta();
-    //   await addDoc(collection(db, 'boletas'), {
-    //     numero: numeroBoleta,
-    //     comprador,
-    //     email,
-    //     compraId,
-    //     fecha: new Date(),
-    //     estado: 'vendida'
-    //   });
-    //   boletas.push(numeroBoleta);
-    // }
-    // return boletas;
-    
-    // Por ahora, simulación:
-    console.log(`Generando ${cantidad} boletas en Firebase para compra ${compraId}`);
-    return Array.from({ length: cantidad }, () => generarNumeroBoleta());
-  }
-
-  async function realizarSorteoEnFirebase(numeroBoleta: string, ganador: any) {
-    // TODO: Implementar sorteo en Firebase
-    // Ejemplo:
-    // await addDoc(collection(db, 'sorteos'), {
-    //   ganador: ganador.nombre,
-    //   numeroBoleta,
-    //   fecha: new Date(),
-    //   compraId: ganador.compraId,
-    //   premio: 'Premio Principal'
-    // });
-    
-    // Por ahora, simulación:
-    console.log(`Realizando sorteo en Firebase para boleta ${numeroBoleta}`);
-    return true;
-  }
-
-  // Función para realizar sorteo cuando se completa una compra
-  async function realizarSorteo(comprador: { nombre: string; email: string; telefono: string; compraId: string }) {
-    // Seleccionar boleta ganadora de forma aleatoria
-    const boletasDisponibles = Array.from({ length: estado.boletasVendidas }, (_, i) => i + 1);
-    const indiceGanador = Math.floor(Math.random() * boletasDisponibles.length);
-    const numeroBoletaGanadora = generarNumeroBoleta();
-
-    // Guardar resultado del sorteo
-    const resultadoSorteo = {
-      ganador: comprador.nombre,
-      email: comprador.email,
-      numeroBoleta: numeroBoletaGanadora,
-      fecha: new Date().toLocaleString('es-ES'),
-      compraId: comprador.compraId,
-    };
-
-    // ============================================
-    // GUARDAR EN FIREBASE
-    // ============================================
-    await realizarSorteoEnFirebase(numeroBoletaGanadora, resultadoSorteo);
-
-    // Actualizar estado
-    estado.totalSorteos++;
-
-    // Mostrar resultado
-    ganadorNombre.textContent = resultadoSorteo.ganador;
-    ganadorBoleta.textContent = `Boleta Ganadora: ${numeroBoletaGanadora}`;
-    ganadorFecha.textContent = resultadoSorteo.fecha;
-    resultadoSorteo.classList.remove('hidden');
-
-    // Actualizar estadísticas
-    actualizarEstadisticas();
-  }
-
-  // Manejar envío del formulario
-  formCompra.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const formData = new FormData(formCompra);
-    const datosCompra = {
-      nombre: formData.get('nombre') as string,
-      email: formData.get('email') as string,
-      telefono: formData.get('telefono') as string,
-      cantidad: parseInt(formData.get('cantidad') as string),
-      metodoPago: formData.get('metodoPago') as string,
-      total: parseInt(formData.get('cantidad') as string) * estado.precioBoleta,
-      fecha: new Date().toISOString(),
-      pagado: true, // Asumiendo que el pago se procesa exitosamente
-    };
-
-    // Validar método de pago si es tarjeta
-    if (datosCompra.metodoPago === 'tarjeta') {
-      const numeroTarjeta = formData.get('numeroTarjeta') as string;
-      const fechaVencimiento = formData.get('fechaVencimiento') as string;
-      const nombreTarjeta = formData.get('nombreTarjeta') as string;
-      const cvv = formData.get('cvv') as string;
-
-      if (!numeroTarjeta || !fechaVencimiento || !nombreTarjeta || !cvv) {
-        alert('Por favor, completa toda la información de la tarjeta.');
-        return;
-      }
-    }
-
-    // Deshabilitar botón durante el proceso
-    const btnComprar = document.getElementById('btnComprar') as HTMLButtonElement;
-    btnComprar.disabled = true;
-    btnComprar.textContent = '⏳ Procesando compra...';
-
-    try {
-      // ============================================
-      // PASO 1: GUARDAR COMPRA EN FIREBASE
-      // ============================================
-      const compraId = await guardarCompraEnFirebase(datosCompra);
-      datosCompra.compraId = compraId;
-
-      // ============================================
-      // PASO 2: GENERAR BOLETAS EN FIREBASE
-      // ============================================
-      const boletas = await generarBoletasEnFirebase(
-        datosCompra.cantidad,
-        compraId,
-        datosCompra.nombre,
-        datosCompra.email
-      );
-
-      // Actualizar estado local
-      estado.boletasVendidas += datosCompra.cantidad;
-      estado.totalRecaudado += datosCompra.total;
-      estado.totalParticipantes++;
-
-      // Mostrar confirmación de compra
-      numeroBoleta.textContent = boletas[0]; // Mostrar primera boleta
-      confirmacionCompra.classList.remove('hidden');
-      formCompra.reset();
-      infoTarjeta.classList.add('hidden');
-
-      // Actualizar estadísticas
-      actualizarEstadisticas();
-
-      // ============================================
-      // PASO 3: REALIZAR SORTEO AUTOMÁTICAMENTE
-      // ============================================
-      // Cuando se completa la compra y el pago, se realiza el sorteo
-      await realizarSorteo({
-        nombre: datosCompra.nombre,
-        email: datosCompra.email,
-        telefono: datosCompra.telefono,
-        compraId: compraId,
-      });
-
-    } catch (error) {
-      console.error('Error al procesar la compra:', error);
-      alert('Hubo un error al procesar tu compra. Por favor, intenta de nuevo.');
-    } finally {
-      btnComprar.disabled = false;
-      btnComprar.textContent = '💳 Comprar y Pagar Boletas';
-    }
-  });
-
-  // Cerrar modales
-  btnCerrarConfirmacion.addEventListener('click', () => {
-    confirmacionCompra.classList.add('hidden');
-  });
-
-  btnCerrarResultado.addEventListener('click', () => {
-    resultadoSorteo.classList.add('hidden');
-  });
-
-  // Manejar formulario de contacto
-  const formContacto = document.getElementById('formContacto') as HTMLFormElement;
-  if (formContacto) {
-    formContacto.addEventListener('submit', (e) => {
-      e.preventDefault();
-      
-      const formData = new FormData(formContacto);
-      const datosContacto = {
-        nombre: formData.get('nombre') as string,
-        email: formData.get('email') as string,
-        asunto: formData.get('asunto') as string,
-        mensaje: formData.get('mensaje') as string,
-        fecha: new Date().toISOString(),
-      };
-
-      // ============================================
-      // AQUÍ IRÍA EL ENVÍO A FIREBASE O BACKEND
-      // ============================================
-      // TODO: Implementar envío de mensaje de contacto
-      // Ejemplo:
-      // await addDoc(collection(db, 'contactos'), datosContacto);
-      
-      console.log('Mensaje de contacto:', datosContacto);
-      
-      // Mostrar confirmación
-      alert('¡Gracias por contactarnos! Te responderemos pronto.');
-      formContacto.reset();
-    });
-  }
-
-  // Inicializar estadísticas
-  actualizarEstadisticas();
-</script>
+  // Inicializa la lógica del cliente (eventos, UI, sim de Firebase)
+  initSorteo();
+</script> -->
 
 <style>
   @keyframes pulse {
-    0%, 100% {
+    0%,
+    100% {
       opacity: 1;
     }
     50% {
       opacity: 0.8;
     }
   }
-  
+
   .animate-pulse {
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
